@@ -5,7 +5,7 @@ export default function Index() {
     <>
       <h1>Remix app for benchmark</h1>
       <p>select payload</p>
-      <Link to={""}>Get small json payload</Link>
+      <Link to={"/small-json-payload"}>Get small json payload</Link>
     </>
   );
 }
