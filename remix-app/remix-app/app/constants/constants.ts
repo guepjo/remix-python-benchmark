@@ -1,1 +1,1 @@
-export const small_payload_dog = "https://place.dog/300/500";
+export const small_payload = "https://reqres.in/api/users/2";

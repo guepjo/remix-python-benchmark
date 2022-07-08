@@ -1,0 +1,3 @@
+import { small_payload } from "../constants/constants";
+
+export const res = await fetch(small_payload);
