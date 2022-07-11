@@ -9,15 +9,3 @@ export async function loader() {
     small_payload: get_small_payload(),
   });
 }
-
-// export default function Index() {
-//   const { small_payload } = useLoaderData();
-//   console.log("remix small payload", small_payload);
-//   return (
-//     <>
-//       <h1>Small Payload</h1>
-//       <p>{JSON.stringify(small_payload)}</p>
-//       <Link to={"/"}>Return to main page</Link>
-//     </>
-//   );
-// }
