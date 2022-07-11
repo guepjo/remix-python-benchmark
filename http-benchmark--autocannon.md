@@ -1,3 +1,10 @@
+# Machine Specifications
+
+MacBook Pro: 2021
+macOS version 12.4
+Chip: Apple M1 Pro
+Memory 32GB
+
 # Remix App Benchmarks
 
 ### Benchmark 1: small payload
@@ -27,7 +34,7 @@ Req/Bytes counts sampled once per second.
 61k requests in 30.17s, 1.16 GB read
 ```
 
-### Benchmark 1: medium payload
+### Benchmark 2: medium payload
 
 ```
 ➜  remix-python-benchmark git:(main) ✗ autocannon -c 100 -d 30 -p 10 http://localhost:3000/medium-json-payload
@@ -54,7 +61,7 @@ Req/Bytes counts sampled once per second.
 52k requests in 30.2s, 2.37 GB read
 ```
 
-### Benchmark 2: large payload
+### Benchmark 3: large payload
 
 ```
 ➜  remix-python-benchmark git:(main) ✗ autocannon -c 100 -d 30 -p 10 http://localhost:3000/large-json-payload
@@ -111,7 +118,7 @@ Req/Bytes counts sampled once per second.
 28k errors (0 timeouts)
 ```
 
-### Benchmark 1: medium payload
+### Benchmark 2: medium payload
 
 ```
 Running 30s test @ http://127.0.0.1:5000/medium-json-payload
@@ -138,7 +145,7 @@ Req/Bytes counts sampled once per second.
 18k errors (0 timeouts)
 ```
 
-### Benchmark 2: large payload
+### Benchmark 3: large payload
 
 ```
 ➜  remix-python-benchmark git:(main) ✗ autocannon -c 100 -d 30 -p 10 http://127.0.0.1:5000/large-json-payload
