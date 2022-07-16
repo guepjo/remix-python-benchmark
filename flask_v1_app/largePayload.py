@@ -1,4 +1,4 @@
-def get_large_payload():
+def getLargePayload():
   return {
   "metadata": {
     "processing_time_ms": 8756,

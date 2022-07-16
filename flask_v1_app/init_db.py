@@ -1,5 +1,12 @@
+import json
+from lib2to3.pgen2.pgen import DFAState
 import os
 import psycopg2
+from largePayload import getLargePayload
+from mediumPayload import getMediumPayload
+
+from smallPayload import getSmallPayload
+
 
 conn = psycopg2.connect(
         host="localhost",
@@ -11,33 +18,39 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # Execute a command: this creates a new table
-cur.execute('DROP TABLE IF EXISTS books;')
-cur.execute('CREATE TABLE books (id serial PRIMARY KEY,'
+cur.execute('DROP TABLE IF EXISTS payload;')
+cur.execute('CREATE TABLE payload (id serial PRIMARY KEY,'
                                  'title varchar (150) NOT NULL,'
-                                 'author varchar (50) NOT NULL,'
-                                 'pages_num integer NOT NULL,'
-                                 'review text,'
-                                 'date_added date DEFAULT CURRENT_TIMESTAMP);'
+                                 'data json NOT NULL);'
                                  )
 
 # Insert data into the table
+cur.execute("""
+            INSERT INTO payload (title, data)
+            VALUES (%s, %s);
+            """,
+            ('small', json.dumps(getSmallPayload())))
 
-cur.execute('INSERT INTO books (title, author, pages_num, review)'
-            'VALUES (%s, %s, %s, %s)',
-            ('A Tale of Two Cities',
-             'Charles Dickens',
-             489,
-             'A great classic!')
-            )
+# Insert data into the table
+cur.execute("""
+            INSERT INTO payload (title, data)
+            VALUES (%s, %s);
+            """,
+            ('medium', json.dumps(getMediumPayload())))# Insert data into the table
+cur.execute("""
+            INSERT INTO payload (title, data)
+            VALUES (%s, %s);
+            """,
+            ('large', json.dumps(getLargePayload())))
 
 
-cur.execute('INSERT INTO books (title, author, pages_num, review)'
-            'VALUES (%s, %s, %s, %s)',
-            ('Anna Karenina',
-             'Leo Tolstoy',
-             864,
-             'Another great classic!')
-            )
+# cur.execute('INSERT INTO books (title, author, pages_num, review)'
+#             'VALUES (%s, %s, %s, %s)',
+#             ('Anna Karenina',
+#              'Leo Tolstoy',
+#              864,
+#              'Another great classic!')
+#             )
 
 conn.commit()
 
