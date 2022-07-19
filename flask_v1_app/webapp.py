@@ -32,7 +32,7 @@ def small_payload():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("""
-                SELECT * FROM payload
+                SELECT data FROM payload
                 Where title='small';""")
     payload = cur.fetchall()
     cur.close()
@@ -44,7 +44,7 @@ def medium_payload():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("""
-                SELECT * FROM payload
+                SELECT data FROM payload
                 Where title='medium';""")
     payload = cur.fetchall()
     cur.close()
@@ -56,7 +56,7 @@ def large_payload():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("""
-                SELECT * FROM payload
+                SELECT data FROM payload
                 Where title='large';""")
     payload = cur.fetchall()
     cur.close()
