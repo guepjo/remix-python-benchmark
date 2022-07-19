@@ -31,19 +31,37 @@ def hello_world():
 def small_payload():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM payload;')
+    cur.execute("""
+                SELECT * FROM payload
+                Where title='small';""")
     payload = cur.fetchall()
     cur.close()
     conn.close()
-    return render_template(payload=payload)
+    return payload.__str__()
 
 @app.route('/medium-json-payload')
 def medium_payload():
-    return getMediumPayload()
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT * FROM payload
+                Where title='medium';""")
+    payload = cur.fetchall()
+    cur.close()
+    conn.close()
+    return payload.__str__()
 
 @app.route('/large-json-payload')
 def large_payload():
-    return getLargePayload()
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT * FROM payload
+                Where title='large';""")
+    payload = cur.fetchall()
+    cur.close()
+    conn.close()
+    return payload.__str__()
 # main driver function
 if __name__ == '__main__':
  
