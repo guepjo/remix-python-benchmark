@@ -1,4 +1,4 @@
-def get_medium_payload():
+def getMediumPayload():
     return {
     "host_": "ltx1-app3767.stg.example.com",
     "count": 25,

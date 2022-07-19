@@ -1,13 +1,23 @@
 
 # Importing flask module in the project is mandatory
 # An object of Flask class is our WSGI application.
-from flask import Flask
+from flask import Flask, render_template
 from largePayload import *
 from mediumPayload import *
 from smallPayload import *
+import os
+import psycopg2
 # Flask constructor takes the name of
 # current module (__name__) as argument.
+
 app = Flask(__name__)
+
+def get_db_connection():
+    conn = psycopg2.connect(host='localhost',
+                            database='flask_db',
+                            user=os.environ['DB_USERNAME'],
+                            password=os.environ['DB_PASSWORD'])
+    return conn
  
 # The route() function of the Flask class is a decorator,
 # which tells the application which URL should call
@@ -19,15 +29,39 @@ def hello_world():
 
 @app.route('/small-json-payload')
 def small_payload():
-    return get_small_payload()
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT data FROM payload
+                Where title='small';""")
+    payload = cur.fetchall()
+    cur.close()
+    conn.close()
+    return payload.__str__()
 
 @app.route('/medium-json-payload')
 def medium_payload():
-    return get_medium_payload()
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT data FROM payload
+                Where title='medium';""")
+    payload = cur.fetchall()
+    cur.close()
+    conn.close()
+    return payload.__str__()
 
 @app.route('/large-json-payload')
 def large_payload():
-    return get_large_payload()
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+                SELECT data FROM payload
+                Where title='large';""")
+    payload = cur.fetchall()
+    cur.close()
+    conn.close()
+    return payload.__str__()
 # main driver function
 if __name__ == '__main__':
  

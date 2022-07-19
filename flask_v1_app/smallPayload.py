@@ -1,4 +1,4 @@
-def get_small_payload():
+def getSmallPayload():
   return {
     "host_": "ltx1-app3767.stg.example.com",
     "count": 10,

@@ -7,6 +7,8 @@ export default function Index() {
       <p>select payload</p>
       <Link to={"/small-json-payload"}>Get small json payload</Link>
       <p></p>
+      <Link to={"/medium-json-payload"}>Get medium json payload</Link>
+      <p></p>
       <Link to={"/large-json-payload"}>Get large json payload</Link>
     </>
   );
