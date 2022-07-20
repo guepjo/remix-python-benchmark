@@ -8,6 +8,8 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
+  const dotenv = require("dotenv");
+  dotenv.config();
   let markup = renderToString(
     <RemixServer context={remixContext} url={request.url} />
   );
