@@ -59,3 +59,5 @@ Fun fact: On linkedin computers, python binaries are stored at this location (/e
 ls /export/apps/python
 2.7  2.7.15 3.10   3.10.0 3.10.2 3.5  3.5.6  3.6  3.6.13 3.7  3.7.10 3.8   3.8.10 3.9  3.9.5
 ```
+
+## Get the Database Running
