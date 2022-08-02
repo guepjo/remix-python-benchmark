@@ -1,8 +1,6 @@
 import { PopconfirmLocale } from "antd/lib/popconfirm";
-import { Client } from "pg";
 import { Pool } from "pg";
 
-let client: Client;
 let pool: Pool;
 
 declare global {
@@ -20,13 +18,6 @@ if (process.env.NODE_ENV === "production") {
     password: "password", //process.env.PGPASSWORD,
     port: 5432, //process.env.PGPORT as unknown as number,
   });
-  // client = new Client({
-  //   user: "flask_usr", //process.env.PGUSER,
-  //   host: "localhost", //process.env.PGHOST,
-  //   database: "flask_db", //process.env.PGDATABASE,
-  //   password: "password", //process.env.PGPASSWORD,
-  //   port: 5432, //process.env.PGPORT as unknown as number,
-  // });
 } else {
   if (!global.__db) {
     global.__db = new Pool();
