@@ -158,44 +158,44 @@ node version: 14.17.5
 ➜  remix-python-benchmark git:(main) ✗ oha -z 10s -c 100 --http-version 1.1 http://localhost:3000/small-json-payload
 Summary:
   Success rate:	1.0000
-  Total:	10.0022 secs
-  Slowest:	0.5803 secs
-  Fastest:	0.0422 secs
-  Average:	0.0770 secs
-  Requests/sec:	1294.5143
+  Total:	10.0023 secs
+  Slowest:	0.2334 secs
+  Fastest:	0.0307 secs
+  Average:	0.0587 secs
+  Requests/sec:	1699.7163
 
-  Total data:	57.10 MiB
-  Size/request:	4.52 KiB
-  Size/sec:	5.71 MiB
+  Total data:	331.99 MiB
+  Size/request:	20.00 KiB
+  Size/sec:	33.19 MiB
 
 Response time histogram:
-  0.059 [6368] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.077 [2095] |■■■■■■■■■■
-  0.094 [1467] |■■■■■■■
-  0.111 [1189] |■■■■■
-  0.128 [869]  |■■■■
-  0.145 [263]  |■
-  0.162 [261]  |■
-  0.180 [232]  |■
-  0.197 [83]   |
-  0.214 [13]   |
-  0.231 [108]  |
+  0.044 [5421] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.057 [3281] |■■■■■■■■■■■■■■■■■■■
+  0.070 [3356] |■■■■■■■■■■■■■■■■■■■
+  0.084 [3466] |■■■■■■■■■■■■■■■■■■■■
+  0.097 [851]  |■■■■■
+  0.110 [277]  |■
+  0.123 [185]  |■
+  0.136 [52]   |
+  0.150 [40]   |
+  0.163 [29]   |
+  0.176 [43]   |
 
 Latency distribution:
-  10% in 0.0472 secs
-  25% in 0.0504 secs
-  50% in 0.0602 secs
-  75% in 0.0908 secs
-  90% in 0.1195 secs
-  95% in 0.1475 secs
-  99% in 0.1888 secs
+  10% in 0.0339 secs
+  25% in 0.0393 secs
+  50% in 0.0562 secs
+  75% in 0.0737 secs
+  90% in 0.0826 secs
+  95% in 0.0906 secs
+  99% in 0.1227 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0044 secs, 0.0025 secs, 0.0103 secs
-  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  DNS+dialup:	0.0152 secs, 0.0049 secs, 0.0178 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0001 secs
 
 Status code distribution:
-  [200] 12948 responses
+  [200] 17001 responses
 
 ```
 
@@ -205,44 +205,44 @@ Status code distribution:
 ➜  remix-python-benchmark git:(main) ✗ oha -z 10s -c 100 --http-version 1.1 http://localhost:3000/medium-json-payload
 Summary:
   Success rate:	1.0000
-  Total:	10.0019 secs
-  Slowest:	0.3908 secs
-  Fastest:	0.0653 secs
-  Average:	0.1130 secs
-  Requests/sec:	880.6295
+  Total:	10.0028 secs
+  Slowest:	0.2903 secs
+  Fastest:	0.0475 secs
+  Average:	0.0768 secs
+  Requests/sec:	1297.2420
 
-  Total data:	64.77 MiB
-  Size/request:	7.53 KiB
-  Size/sec:	6.48 MiB
+  Total data:	586.30 MiB
+  Size/request:	46.27 KiB
+  Size/sec:	58.61 MiB
 
 Response time histogram:
-  0.090 [3194] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.115 [2497] |■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.140 [1378] |■■■■■■■■■■■■■
-  0.165 [917]  |■■■■■■■■■
-  0.190 [344]  |■■■
-  0.215 [184]  |■
-  0.240 [212]  |■■
-  0.264 [34]   |
-  0.289 [6]    |
-  0.314 [11]   |
-  0.339 [31]   |
+  0.064 [6146] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.081 [2090] |■■■■■■■■■■
+  0.097 [1497] |■■■■■■■
+  0.114 [2022] |■■■■■■■■■■
+  0.131 [675]  |■■■
+  0.147 [243]  |■
+  0.164 [131]  |
+  0.180 [63]   |
+  0.197 [61]   |
+  0.214 [7]    |
+  0.230 [41]   |
 
 Latency distribution:
-  10% in 0.0770 secs
-  25% in 0.0843 secs
-  50% in 0.1030 secs
-  75% in 0.1302 secs
-  90% in 0.1624 secs
-  95% in 0.1947 secs
-  99% in 0.2381 secs
+  10% in 0.0517 secs
+  25% in 0.0537 secs
+  50% in 0.0669 secs
+  75% in 0.0973 secs
+  90% in 0.1129 secs
+  95% in 0.1263 secs
+  99% in 0.1716 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0041 secs, 0.0027 secs, 0.0103 secs
+  DNS+dialup:	0.0159 secs, 0.0064 secs, 0.0188 secs
   DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0001 secs
 
 Status code distribution:
-  [200] 8808 responses
+  [200] 12976 responses
 ```
 
 ### Benchmark 3: large payload
@@ -251,44 +251,44 @@ Status code distribution:
 ➜  remix-python-benchmark git:(main) ✗ oha -z 10s -c 100 --http-version 1.1 http://localhost:3000/large-json-payload
 Summary:
   Success rate:	1.0000
-  Total:	10.0021 secs
-  Slowest:	0.5471 secs
-  Fastest:	0.2025 secs
-  Average:	0.2914 secs
-  Requests/sec:	338.0305
+  Total:	10.0041 secs
+  Slowest:	0.6474 secs
+  Fastest:	0.1824 secs
+  Average:	0.2453 secs
+  Requests/sec:	402.1357
 
-  Total data:	57.81 MiB
-  Size/request:	17.51 KiB
-  Size/sec:	5.78 MiB
+  Total data:	840.00 MiB
+  Size/request:	213.81 KiB
+  Size/sec:	83.97 MiB
 
 Response time histogram:
-  0.234 [278]  |■■■■■■■
-  0.265 [483]  |■■■■■■■■■■■■■
-  0.297 [1055] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.328 [1177] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.359 [314]  |■■■■■■■■
-  0.390 [11]   |
-  0.422 [15]   |
-  0.453 [10]   |
-  0.484 [10]   |
-  0.516 [10]   |
-  0.547 [18]   |
+  0.225 [1367] |■■■■■■■■■■■■■■■■■■■■■■
+  0.267 [1985] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.309 [469]  |■■■■■■■
+  0.351 [87]   |■
+  0.394 [37]   |
+  0.436 [21]   |
+  0.478 [15]   |
+  0.521 [10]   |
+  0.563 [10]   |
+  0.605 [10]   |
+  0.647 [12]   |
 
 Latency distribution:
-  10% in 0.2394 secs
-  25% in 0.2709 secs
-  50% in 0.2914 secs
-  75% in 0.3153 secs
-  90% in 0.3312 secs
-  95% in 0.3458 secs
-  99% in 0.4588 secs
+  10% in 0.2014 secs
+  25% in 0.2157 secs
+  50% in 0.2396 secs
+  75% in 0.2578 secs
+  90% in 0.2902 secs
+  95% in 0.3093 secs
+  99% in 0.4950 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0051 secs, 0.0027 secs, 0.0109 secs
-  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0001 secs
+  DNS+dialup:	0.0138 secs, 0.0048 secs, 0.0163 secs
+  DNS-lookup:	0.0001 secs, 0.0000 secs, 0.0006 secs
 
 Status code distribution:
-  [200] 3381 responses
+  [200] 4023 responses
 ```
 
 # Flask App Benchmarks
